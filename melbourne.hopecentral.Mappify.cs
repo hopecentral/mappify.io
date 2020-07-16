@@ -155,15 +155,28 @@ namespace melbourne.hopecentral.Mappify.Address
             string[] separatingStrings = { ", " };
             string[] addressComponents = addressStreet.Split(separatingStrings, StringSplitOptions.RemoveEmptyEntries);
             
-            if ( address.primary )
+            if (addressComponents.Length >= 2)
             {
-                location.Street1 = addressComponents[0];
-                location.Street2 = addressComponents[1];
-            }
-            else
-            {
-                location.Street1 = addressComponents[0];
-                location.Street2 = "";
+                if (addressComponents.Length == 2)
+                {
+                    location.Street1 = addressComponents[0];
+                    location.Street2 = "";
+                }
+                else if (addressComponents.Length == 3)
+                {
+                    location.Street1 = addressComponents[0];
+                    location.Street2 = addressComponents[1];
+                }
+                else
+                {
+                    List<string> parts = new List<string>();
+                    for (int i = 0; i < (addressComponents.Length - 2); i++)
+                    {
+                        parts.Add(addressComponents[i]);
+                    }
+                    location.Street1 = String.Join(" ", parts);
+                    location.Street2 = addressComponents[addressComponents.Length - 2];
+                }
             }
             
             string city = address.suburb;
