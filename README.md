@@ -20,7 +20,7 @@ mappify.io uses address data from the PSMA Geocoded National Address File (GNAF)
 If anything looks broken or you think of an improvement please flag up an issue.
 
 ## Thanks
-Thanks to [Bricks and Mortar Studio] (https://bricksandmortarstudio.com/) whose [IdealPostcodes] (https://github.com/BricksandMortar/IdealPostcodes) plugin was where initial ideas were drawn from.
-Thanks to the [Spark Development Network] (https://sparkdevnetwork.org/) for creating [Rock] (https://github.com/SparkDevNetwork/Rock) and making it so accessible.
+Thanks to [Bricks and Mortar Studio](https://bricksandmortarstudio.com/) whose [IdealPostcodes](https://github.com/BricksandMortar/IdealPostcodes) plugin was where initial ideas were drawn from.
+Thanks to the [Spark Development Network](https://sparkdevnetwork.org/) for creating [Rock](https://github.com/SparkDevNetwork/Rock) and making it so accessible.
 
 This project is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
