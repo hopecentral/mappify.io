@@ -84,16 +84,19 @@ namespace melbourne.hopecentral.Mappify.Address
                     if ( mappifyAddress.Count() == 1 || mappifyResponse.confidence >= 0.75 )
                     {
                         bool updateResult = UpdateLocation(location, address);
-                        
+                        var generalMsg = string.Format("Verified with mappify.io to match GNAF: {0} with {1}% confidence. Input address: {2}. ", address?.gnafId, confidencePercentage, streetAddress);
+                        var standardisedMsg = "Coordinates NOT updated.";
+                        var geocodedMsg = "Coordinates updated.";
+
                         if (updateResult)
                         {
                             result = VerificationResult.Geocoded;
-                            resultMsg = string.Format("Verified with mappify.io to match GNAF: {0} with {1}% confidence, address standardised to: {2}. Coordinates updated.", address?.gnafId, confidencePercentage, address?.streetAddress);
+                            resultMsg = generalMsg + geocodedMsg;
                         }
                         else
                         {
                             result = VerificationResult.Standardized;
-                            resultMsg = string.Format("Verified with mappify.io to match GNAF: {0} with {1}% confidence, address standardised to: {2}. Coordinates NOT updated.", address?.gnafId, confidencePercentage, address?.streetAddress);
+                            resultMsg = generalMsg + standardisedMsg;
                         }
                     }
                     else
