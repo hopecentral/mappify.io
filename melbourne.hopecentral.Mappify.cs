@@ -32,7 +32,7 @@ using Rock.Attribute;
 namespace melbourne.hopecentral.Mappify.Address
 {
     /// <summary>
-    /// The address lookup and geocoding service from <a href="https://mappify.io/">mappify.io</a>
+    /// An address lookup and geocoding service using <a href="https://mappify.io/">mappify.io</a>
     /// </summary>
     [Description( "An address verification and geocoding service from mappify.io" )]
     [Export( typeof( VerificationComponent ) )]
@@ -210,7 +210,7 @@ namespace melbourne.hopecentral.Mappify.Address
             public bool includeInternalIdentifiers { get; set; }
         }
 
-        public class Location
+        public class Coordinates
         {
             public double? lat { get; set; }
             public double? lon { get; set; }
@@ -231,7 +231,7 @@ namespace melbourne.hopecentral.Mappify.Address
             public string suburb { get; set; }
             public string state { get; set; }
             public string postCode { get; set; }
-            public Location location { get; set; }
+            public Coordinates location { get; set; }
             public bool primary { get; set; }
             public string streetAddress { get; set; }
             public string jurisdictionId { get; set; }

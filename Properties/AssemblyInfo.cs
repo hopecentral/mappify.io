@@ -5,13 +5,20 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("mappify.io Rock RMS Plugin")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("Standardizes and Geocodes a Rock RMS address using the mappify.io service")]
 [assembly: AssemblyCompany("Hope Central")]
-[assembly: AssemblyProduct( "mappify.io" )]
-[assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyProduct( "Mappify" )]
+[assembly: AssemblyCopyright("Copyright © Hope Central 2020")]
+
+#if (DEBUG)
+
+[assembly: AssemblyConfiguration("Debug")]
+
+#else
+
+[assembly: AssemblyConfiguration("Release")]
+
+#endif
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
