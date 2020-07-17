@@ -6,9 +6,9 @@ This is a location service for [Rock](http://rockrms.com) that verifies, standar
 This plugin is available on Github to help the Australian churches using Rock RMS.  The repository includes the C# source for use with the [Rockit SDK](http://www.rockrms.com/Rock/Developer). To download the latest release of the plugin in .dll format click [here](https://github.com/hopecentral/mappify.io/releases/latest).
 
 ## A Quick Explanation
-This location service will pass the values (if any are present) of the address line 1, address line 2, city, state, and postal code fields from Rock to the mappify.io address autocomplete remote procedure call API service. The location service asks for the best match and, if values are present in the response, it verifies the confidence level of the match and either will:
-1. confirm verfication and replace the address values stored in Rock with the standardised response values, including geocode coordinates, or
-2. deny verification, due to low match confidence, and instead provide the best match provided by mappify.io with an associated confidence level as a percentage.
+This location service will pass the values (if any are present) of the address line 1, address line 2, city, state, and postal code fields from Rock to the mappify.io address autocomplete remote procedure call API service. The location service asks for the best match and, if values are present in the response, it verifies the confidence level of the match and will either:
+1. confirm verification and replace the address values stored in Rock with the standardised response values, including geocode coordinates, or
+2. deny verification, due to low match confidence, and instead provide the best match provided by mappify.io with an associated confidence level as a percentage. If this happens, check the recommended match details provided and if suitable update the address to match it and verify again.
 
 ## mappify.io Data
 mappify.io uses address data from the PSMA Geocoded National Address File (GNAF). G-NAF is built from addresses supplied by 10 contributors, including the land agencies in each state and territory of Australia. The source data is:
