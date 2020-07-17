@@ -3,7 +3,7 @@
 ## Intro
 This is a location service for [Rock](http://rockrms.com) that verifies, standardises and geocodes Australian (AUS) addresses using the [mappify.io](http://mappify.io) API. The generous 2500 free requests per day on the Pay as you go signup option will meet most churches needs.
 
-This plugin is still under development and will soon be made available on Github to help the Australian churches who don't have a developer or access to the plugin via the Rock Store.  The repository includes the C# source for use with the [Rockit SDK](http://www.rockrms.com/Rock/Developer).
+This plugin is available on Github to help the Australian churches using Rock RMS.  The repository includes the C# source for use with the [Rockit SDK](http://www.rockrms.com/Rock/Developer). To download the latest release of the plugin in .dll format click [here](https://github.com/hopecentral/mappify.io/releases/latest).
 
 ## A Quick Explanation
 This location service will pass the values (if any are present) of the address line 1, address line 2, city, state, and postal code fields from Rock to the mappify.io address autocomplete remote procedure call API service. The location service asks for the best match and, if values are present in the response, it verifies the confidence level of the match and either will:
